@@ -1,18 +1,17 @@
 const TelegramBot = require("node-telegram-bot-api");
 const axios = require("axios");
-const { HttpsProxyAgent } = require("https-proxy-agent");
+// const { HttpsProxyAgent } = require("https-proxy-agent");
 
 // --- settings ---
 const TELEGRAM_TOKEN = "8052703775:AAHUjEls49axaHEg3rTCdvUNjvNXA235PiQ";
-const proxy = "http://127.0.0.1:10809";
+// const proxy = "http://127.0.0.1:10809";
 
 const bot = new TelegramBot(TELEGRAM_TOKEN, {
     polling: true,
-    request: {
-        agent: new HttpsProxyAgent(proxy),
-    },
 });
-
+// request: {
+//         agent: new HttpsProxyAgent(proxy),
+//     },
 // main menu
 const home = function (chatId) {
     const mainMenu = {
